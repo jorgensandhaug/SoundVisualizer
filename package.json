@@ -1,0 +1,29 @@
+{
+  "name": "soundvisualizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nodeapp.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ffmpeg": "^0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "fs": "^0.0.1-security",
+    "socket.io": "^2.3.0",
+    "youtube-audio-stream": "^0.3.5",
+    "youtube-dl": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "nodeapp": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgensandhaug/SoundVisualizer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorgensandhaug/SoundVisualizer/issues"
+  },
+  "homepage": "https://github.com/jorgensandhaug/SoundVisualizer#readme"
+}
