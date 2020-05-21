@@ -8,7 +8,8 @@ function createSong(name){
 }
 const songSelector = document.getElementById("songSelector")
 let songs = {}
-const socket = io()
+const socket = window.location.href == "http://localhost:3000/" ? io() : io("https://soundvisualizer.herokuapp.com/")
+console.log(window.location)
 socket.on("songList", files =>{
     files.forEach( (src, index) =>{
         let songName = src.slice(0, src.length-4)
