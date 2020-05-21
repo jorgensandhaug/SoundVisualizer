@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #control{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        canvas{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        body,html{
+            overflow:hidden
+        }
+        select{
+            position: absolute;
+            top: 140px;
+            height: 40px;
+            /* width: 110px; */
+            font-size: 20px;
+            left: 20px;
+        }
+        option{
+            height:40px;
+        }
+    </style>
+</head>
+<body>
+    <canvas></canvas>
+    <div id="control"></div>
+    <select id="songSelector"><option>Pick Song</option> </select>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="sketch.js"> </script>
+</body>
+</html>
