@@ -6,17 +6,22 @@ function createSong(name){
     track.autoplay = false
     return track
 }
+
 const songSelector = document.getElementById("songSelector")
 let songs = {}
-const socket = window.location.href == "http://localhost:3000/" ? io() : io("https://soundvisualizer.herokuapp.com/")
-console.log(window.location)
-socket.on("songList", files =>{
-    files.forEach( (src, index) =>{
-        let songName = src.slice(0, src.length-4)
-        songs[songName] = createSong(songName)
-    })
-    initSongSelector()
-})
+const songNames = ["ACDC - Thunderstruck", "Ahrix - Nova", "Flight - Tristam", "Hungarian Rhapsody nr.2", "Imagine Dragons - Radioactive", "Labrinth - I'm Blessed (Official Audio)", "Labrinth - Imagination (Official Audio)", "Labrinth - Juju Woman (Official Audio)", "Labrinth - Mount Everest (Official Audio)", "Labrinth - Sexy MF (Official Audio)", "Labrinth - The Producer", "Stephen - Bullet Train ft. Joni Fatora (Official Audio)"]
+for(let i = 0; i < songNames.length; i++){
+    songs[songNames[i]] = createSong(songNames[i])
+}
+// const socket = window.location.href == "http://localhost:3000/" ? io() : io("https://soundvisualizer.herokuapp.com/")
+// console.log(window.location)
+// socket.on("songList", files =>{
+//     files.forEach( (src, index) =>{
+//         const songName = src.slice(0, src.length-4)
+//         songs[songName] = createSong(songName)
+//     })
+//     initSongSelector()
+// })
 
 function initSongSelector(){
     for(let name in songs){
@@ -28,6 +33,7 @@ function initSongSelector(){
         if(songSelector.selectedIndex != 0) initMp3Player(songs[songSelector[songSelector.selectedIndex].value])
     })
 }
+initSongSelector()
 
 
 
