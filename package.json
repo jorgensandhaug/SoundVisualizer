@@ -8,7 +8,7 @@
     "ffmpeg": "^0.0.4",
     "fluent-ffmpeg": "^2.1.2",
     "fs": "^0.0.1-security",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.4.0",
     "youtube-audio-stream": "^0.3.5",
     "youtube-dl": "^3.0.2"
   },
